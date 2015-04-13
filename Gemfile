@@ -28,6 +28,9 @@ group :development, :test do
   gem 'launchy', '2.0.5'
   gem 'rspec-rails', '2.8.1'
   gem 'spork', '0.9.0'
+  gem 'rubocop', '~> 0.30.0'
+  gem 'pry-rails', '~> 0.3'
+  gem 'brakeman', '~> 1.9.5'
 end
 
 group :test do
