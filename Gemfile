@@ -24,17 +24,29 @@ end
 
 
 group :development, :test do
-  gem 'foreman', '0.40.0'
+  gem 'foreman', '~> 0.40'
   gem 'launchy', '2.0.5'
-  gem 'rspec-rails', '2.8.1'
+  gem 'rspec-rails', '~> 2.9'
   gem 'spork', '0.9.0'
+end
+
+group :development do
+  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  gem 'spring'
+
+  gem 'guard', '~> 2.7'
+  gem 'guard-rspec', '~> 4.3'
+  gem 'guard-brakeman'
+  gem 'guard-rubocop'
+  gem 'fuubar'
+
   gem 'rubocop', '~> 0.30.0'
   gem 'pry-rails', '~> 0.3'
   gem 'brakeman', '~> 1.9.5'
 end
 
 group :test do
-  gem 'bourne', '1.1.1'
+  gem 'bourne', '~> 1.1'
   gem 'capybara-webkit', '0.12.1'
   gem 'cucumber-rails', '1.3.0', :require => false
   gem 'database_cleaner', '0.7.1'

@@ -27,12 +27,12 @@ describe KeyedRelation do
   it "has a known key" do
     one = create_keyed_record("key.one")
     keyed_relation["key.two"] = "two"
-    keyed_relation.key?("key.one").should be_true
-    keyed_relation.key?("key.two").should be_true
+    keyed_relation.key?("key.one").should be_truthy
+    keyed_relation.key?("key.two").should be_truthy
   end
 
   it "doesn't have an unknown key" do
-    keyed_relation.key?("unknown").should be_false
+    keyed_relation.key?("unknown").should be_falsey
   end
 
   it "returns records" do

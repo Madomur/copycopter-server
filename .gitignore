@@ -4,3 +4,4 @@ vendor/cache
 .rvmrc
 tmp/**/*
 .bundle
+.rubocop_*
